@@ -7,10 +7,16 @@
 <body bgcolor="#dddddd">
 
 <h1>BGG Bookmarklets</h1>
-Copy and paste these to your BGG QuickBar to make it do things:
+Copy and paste these to your BGG QuickBar or some other bookmark to make it do things:
 
+Add Cassie Links by each user in forum posts:
 <code style="display: block; border: 3px solid #888; margin: 25px; padding: 15px;">
-javascript:/* TODO: Code goes here */
+javascript:(function(){if(window.pvbggAddCassie!==undefined){pvbggAddCassie();}else{document.body.appendChild(document.createElement('script')).src='http://petevasi.github.io/bggBookmarklets/addCassie.js?';}})();
+</code>
+
+Mobilize!  (work-in-progress, seeing if I can just hack existing bgg to be mobile-friendly):
+<code style="display: block; border: 3px solid #888; margin: 25px; padding: 15px;">
+javascript:(function(){if(window.pvbggMobilize!==undefined){pvbggMobilize();}else{document.body.appendChild(document.createElement('script')).src='http://petevasi.github.io/bggBookmarklets/mobilize.js?';}})();
 </code>
 
 </body>
