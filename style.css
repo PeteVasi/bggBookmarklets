@@ -1,0 +1,75 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+
+/* basic elements */
+html {
+	margin: 0px 50px;
+	padding: 0;
+	}
+body { 
+	font: 75% helvetica, arial, sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	background: #f5f5ff; 
+	margin: 0; 
+	padding: 0;
+	}
+p { 
+	margin-top: 0;
+    margin-left: 10px;
+	text-align: justify;
+	}
+h3 { 
+	font: italic normal 1.4em helvetica, arial, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: #7D775C;
+	}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #0000ff;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #0000ff;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #4444ff;
+	}
+abbr {
+	border-bottom: none;
+	}
+code {
+    border: 3px solid #888;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    }
+
+/* http://css-tricks.com/examples/hrs/ */
+hr {
+    margin-top: 30px;
+    margin-left: -40px;
+    margin-right: -40px;
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;    
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}

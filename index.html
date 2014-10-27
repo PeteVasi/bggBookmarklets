@@ -3,21 +3,74 @@
 <head>
 	<meta charset="utf-8">
 	<title>BGG Bookmarklets</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
-<body bgcolor="#dddddd">
+<body>
 
 <h1>BGG Bookmarklets</h1>
-Copy and paste these to your BGG QuickBar or some other bookmark to make it do things:
 
-Add Cassie Links by each user in forum posts:
-<code style="display: block; border: 3px solid #888; margin: 25px; padding: 15px;">
+<hr />
+<div class="sectionA">
+<h2>What are they?</h2>
+<p>
+Bookmarklets are "little" snippets of JavaScript code that reside inside of a bookmark or similar and somehow modify
+or use the current web page that you're viewing.  These are specifically made to modify pages on
+<a href="http://www.boardgamegeek.com/">BoardGameGeek.com</a>.
+</p>
+</div>
+
+<hr />
+
+<h2>How to set one up:</h2>
+<h3>Step 1</h3>
+<p>
+In the upper-right of any BGG page is the QuickBar.  Click <b>Edit</b>, and let's make a new link in here.  (This
+can also be done as a bookmark, favorite, or otherwise, but I'll just talk about the QuickBar here.)
+</p>
+<p><img src="images/howto1.png"></p>
+
+<h3>Step 2</h3>
+<p>
+Highlight all of the code in this block and copy it (<I>Ctrl+C</i> on Windows):
+</p>
+<p><code>
 javascript:(function(){if(window.pvbggAddCassie!==undefined){pvbggAddCassie();}else{document.body.appendChild(document.createElement('script')).src='http://petevasi.github.io/bggBookmarklets/addCassie.js?';}})();
-</code>
+</code></p>
 
-Mobilize!  (work-in-progress, seeing if I can just hack existing bgg to be mobile-friendly):
-<code style="display: block; border: 3px solid #888; margin: 25px; padding: 15px;">
+<h3>Step 3</h3>
+<p>Give your link a name and paste in the JavaScript code into the URL field:</p>
+<p><img src="images/howto3.png"></p>
+
+<h3>Step 4</h3>
+<p>Go to a page where the link will have an effect and click on it.  In this case, visit a PBF Werewolf game thread.</p>
+<p><img src="images/howto4.png"></p>
+
+<h3>Step 5</h3>
+<p>The "Add Cassie Links" bookmarklet puts a little icon next to each user's post in the thread.  Clicking on the icon
+will open a window with handy Cassie Werewolf-related links.</p>
+<p><img src="images/howto5.png"></p>
+
+<hr />
+
+<h2>What bookmarklets are available?</h2>
+
+<h3>Add Cassie Links</h3>
+<p>Add an icon by each user's forum posts with a menu that has handy Cassie links for PBF Werewolf.</p>
+<p><code>
+javascript:(function(){if(window.pvbggAddCassie!==undefined){pvbggAddCassie();}else{document.body.appendChild(document.createElement('script')).src='http://petevasi.github.io/bggBookmarklets/addCassie.js?';}})();
+</code></p>
+<p><img src="images/howto5.png"></p>
+
+<h3>Mobilize!</h3>
+<p>A work-in-progress, I'm seeing if I can just hack existing BGG pages to be mobile-friendly.</p>
+<p><code>
 javascript:(function(){if(window.pvbggMobilize!==undefined){pvbggMobilize();}else{document.body.appendChild(document.createElement('script')).src='http://petevasi.github.io/bggBookmarklets/mobilize.js?';}})();
-</code>
+</code></p>
 
+<hr />
+
+<h2>Can I make/modify one?</h2>
+<p>Sure!  Head to the <a href="https://github.com/PeteVasi/bggBookmarklets">BGG Bookmarklets GitHub page</a> and start
+your own fork.</p>
 </body>
 </html>
